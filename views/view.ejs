@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+    <div class="container main">
+        <div class="col" style="width: 100%;">
+            <% post.forEach(post=> { %>
+                <div class="post">
+                    <div class="post-info">
+                        <h2><a href="/post/<%= post.slug %>"><%= post.title %></a></h2>
+
+                        <div class="user-info">
+                            <img src="/avatat.png" alt="User Avatar">
+                            <span>
+                                <%= post.username || 'Unknown Author' %>
+                            </span>
+                            <span>
+                                <%= post.date || 'Unknown Date' %>
+                            </span>
+                            <span>#<%= post.category || 'General' %></span>
+                        </div>
+                        <p>
+                            <%= post.content %>
+                        </p>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <script src="/styles/script.js"></script>
+    <%- include("partials/footer.ejs") %>

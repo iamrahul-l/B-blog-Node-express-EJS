@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<div class="container post-content">
+    <div class="post">
+        <div class="post-info">
+            <a href="/post/<%= post.slug %>"><%= post.title %></a>
+            <div class="user-info">
+                <img src="/avatat.png" alt="Author Image">
+                <span><%= post.username %></span>
+                <span><%= post.date %></span>
+                <span>#<%= post.category %></span>
+            </div>
+            <p><%= post.content %></p>
+        </div>
+    </div>
+</div>
+<script src="/styles/script.js"></script>
+<%- include("partials/footer.ejs") %>
