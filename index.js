@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3030;
+const port = process.env.PORT || 4000;
 const contactContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue diam, finibus in tristique non, faucibus at nibh. Integer quis sem iaculis, lobortis nisi sed, elementum purus. Mauris condimentum mi non elit volutpat pretium. Nulla eu tristique elit. Proin vulputate fringilla aliquet. Nulla tristique varius ipsum non tempus. Etiam dapibus elit id libero consectetur, id aliquam ligula euismod. Aenean iaculis quis mauris blandit mattis. Fusce at scelerisque sapien. Duis aliquet a urna ut dignissim. Sed mollis a diam quis faucibus. Vivamus et placerat tellus. Quisque auctor imperdiet sodales. Donec pretium suscipit purus, in mollis est tristique sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fringilla ornare nisl, et rutrum mi tincidunt ac.";
 let post = [];
 
